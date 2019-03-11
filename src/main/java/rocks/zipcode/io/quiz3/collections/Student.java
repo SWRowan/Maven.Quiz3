@@ -2,20 +2,25 @@ package rocks.zipcode.io.quiz3.collections;
 
 import rocks.zipcode.io.quiz3.objectorientation.enums.LabStatus;
 
+import java.util.HashMap;
 import java.util.Map;
 
 /**
  * @author leon on 10/12/2018.
  */
 public class Student {
+    public Map<Lab, LabStatus> map;
+
     public Student() {
-        this(null);
+        this(new HashMap<>());
     }
 
     public Student(Map<Lab, LabStatus> map) {
+        this.map = map;
     }
 
     public Lab getLab(String labName) {
+        map.get(labName);
         return null;
     }
 
