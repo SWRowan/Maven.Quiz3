@@ -46,10 +46,13 @@ public class ArrayUtility<SomeType> {
     }
 
     public SomeType[] filter(Function<SomeType, Boolean> predicate) {
+        ArrayList<SomeType> list = (ArrayList<SomeType>) Arrays.stream(array).map(predicate)
+                .collect(Collectors.toList());
 
-//        SomeType[] answer = Arrays.stream(array).map(predicate)
-//                .collect(Stream.toArray());
-
+//        if(list instanceof ArrayList<String>){
+//
+//        }
+        //SomeType[] arr = new SomeType[list.size()];
 
 
 
