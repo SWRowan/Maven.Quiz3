@@ -5,10 +5,13 @@ package rocks.zipcode.io.quiz3.arrays;
  */
 public class WaveGenerator {
     public static String[] wave(String str) {
-        StringBuilder sb = new StringBuilder(str.toLowerCase());
+
+
+
         String[] wave = new String[str.length()];
 
         for (int i = 0; i < str.length() ; i++) {
+            StringBuilder sb = new StringBuilder(str.toLowerCase());
             sb.setCharAt(i, str.toUpperCase().charAt(i));
             wave[i] = sb.toString();
         }
